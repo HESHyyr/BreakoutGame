@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Sprite">
+      <UniqueIdentifier>{8d586cb8-cc0f-4bb5-bdc7-c3213ef1b53f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameManager">
+      <UniqueIdentifier>{6d3bc6a2-74c0-4f2f-9d99-d51bdcf6a157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component">
+      <UniqueIdentifier>{bd03b60c-7bd7-4edb-bad0-b225216c9bbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component\Render">
+      <UniqueIdentifier>{21203700-855f-43a4-99e5-6872140c63be}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Scripts\MainDriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Sprite\Sprite.cpp">
+      <Filter>Source Files\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\GameManager\SubSystemManager.cpp">
+      <Filter>Source Files\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\GameManager\SDLManager.cpp">
+      <Filter>Source Files\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Sprite\GameSprites\Brick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Component\Render\GameRenderer.cpp">
+      <Filter>Source Files\Component\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Component\GameComponent.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Component\Render\RectangleRenderer2D.cpp">
+      <Filter>Source Files\Component\Render</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Scripts\Sprite\Sprite.h">
+      <Filter>Source Files\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\GameManager\SubSystemManager.h">
+      <Filter>Source Files\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\GameManager\SDLManager.h">
+      <Filter>Source Files\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Sprite\GameSprites\Brick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Component\Render\GameRenderer.h">
+      <Filter>Source Files\Component\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Component\GameComponent.h">
+      <Filter>Source Files\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Component\Render\RectangleRenderer2D.h">
+      <Filter>Source Files\Component\Render</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

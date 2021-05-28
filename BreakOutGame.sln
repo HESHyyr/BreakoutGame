@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1321
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BreakOutGame", "BreakOutGame\BreakOutGame.vcxproj", "{EF938C70-D544-4758-BA08-FB242E4E4CAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF938C70-D544-4758-BA08-FB242E4E4CAC}.Debug|x64.ActiveCfg = Debug|x64
+		{EF938C70-D544-4758-BA08-FB242E4E4CAC}.Debug|x64.Build.0 = Debug|x64
+		{EF938C70-D544-4758-BA08-FB242E4E4CAC}.Debug|x86.ActiveCfg = Debug|Win32
+		{EF938C70-D544-4758-BA08-FB242E4E4CAC}.Debug|x86.Build.0 = Debug|Win32
+		{EF938C70-D544-4758-BA08-FB242E4E4CAC}.Release|x64.ActiveCfg = Release|x64
+		{EF938C70-D544-4758-BA08-FB242E4E4CAC}.Release|x64.Build.0 = Release|x64
+		{EF938C70-D544-4758-BA08-FB242E4E4CAC}.Release|x86.ActiveCfg = Release|Win32
+		{EF938C70-D544-4758-BA08-FB242E4E4CAC}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C61F3F5E-A4CF-4F28-9AB6-8A4B7EECC4C2}
+	EndGlobalSection
+EndGlobal
