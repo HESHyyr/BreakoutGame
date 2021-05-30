@@ -19,23 +19,21 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Scripts\Component\GameComponent.cpp" />
-    <ClCompile Include="Scripts\Component\Render\GameRenderer.cpp" />
-    <ClCompile Include="Scripts\Component\Render\RectangleRenderer2D.cpp" />
-    <ClCompile Include="Scripts\GameManager\SDLManager.cpp" />
-    <ClCompile Include="Scripts\GameManager\SubSystemManager.cpp" />
-    <ClCompile Include="Scripts\MainDriver.cpp" />
-    <ClCompile Include="Scripts\Sprite\GameSprites\Brick.cpp" />
-    <ClCompile Include="Scripts\Sprite\Sprite.cpp" />
+    <ClCompile Include="Engine\Component\GameComponent.cpp" />
+    <ClCompile Include="Engine\Component\Render\GameRenderer.cpp" />
+    <ClCompile Include="Engine\Component\Render\RectangleRenderer2D.cpp" />
+    <ClCompile Include="Engine\GameManager\SDLManager.cpp" />
+    <ClCompile Include="Engine\GameManager\SubSystemManager.cpp" />
+    <ClCompile Include="Engine\MainDriver.cpp" />
+    <ClCompile Include="Engine\Sprite\Sprite.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Scripts\Component\GameComponent.h" />
-    <ClInclude Include="Scripts\Component\Render\GameRenderer.h" />
-    <ClInclude Include="Scripts\Component\Render\RectangleRenderer2D.h" />
-    <ClInclude Include="Scripts\GameManager\SDLManager.h" />
-    <ClInclude Include="Scripts\GameManager\SubSystemManager.h" />
-    <ClInclude Include="Scripts\Sprite\GameSprites\Brick.h" />
-    <ClInclude Include="Scripts\Sprite\Sprite.h" />
+    <ClInclude Include="Engine\Component\GameComponent.h" />
+    <ClInclude Include="Engine\Component\Render\GameRenderer.h" />
+    <ClInclude Include="Engine\Component\Render\RectangleRenderer2D.h" />
+    <ClInclude Include="Engine\GameManager\SDLManager.h" />
+    <ClInclude Include="Engine\GameManager\SubSystemManager.h" />
+    <ClInclude Include="Engine\Sprite\Sprite.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -93,7 +91,7 @@
     <IncludePath>D:\GameDev Projects\BreakOut\BreakOutGame\BreakOutGame\Library\SDL2-2.0.12\include;D:\GameDev Projects\BreakOut\BreakOutGame\BreakOutGame\Library\SDL2_image-2.0.5\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)\BreakOutGame\Library\SDL2_image-2.0.5\include;$(SolutionDir)\BreakOutGame\Library\SDL2_ttf-devel-2.0.15-VC\SDL2_ttf-2.0.15\include;$(SolutionDir)\BreakOutGame\Library\SDL2-2.0.12\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\BreakOutGame\Engine;$(SolutionDir)\BreakOutGame\Library\SDL2_image-2.0.5\include;$(SolutionDir)\BreakOutGame\Library\SDL2_ttf-devel-2.0.15-VC\SDL2_ttf-2.0.15\include;$(SolutionDir)\BreakOutGame\Library\SDL2-2.0.12\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)\BreakOutGame\Library\SDL2_image-2.0.5\lib\x64;$(SolutionDir)\BreakOutGame\Library\SDL2_ttf-devel-2.0.15-VC\SDL2_ttf-2.0.15\lib\x64;$(SolutionDir)\BreakOutGame\Library\SDL2-2.0.12\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

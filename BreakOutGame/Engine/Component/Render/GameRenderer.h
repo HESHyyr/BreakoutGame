@@ -1,6 +1,6 @@
 #pragma once
-#include "../../GameManager/SDLManager.h"
-#include "../GameComponent.h"
+#include "GameManager/SDLManager.h"
+#include "Component/GameComponent.h"
 #include <vector>
 
 using namespace std;
