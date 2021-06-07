@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Sprite">
-      <UniqueIdentifier>{8d586cb8-cc0f-4bb5-bdc7-c3213ef1b53f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\GameManager">
       <UniqueIdentifier>{6d3bc6a2-74c0-4f2f-9d99-d51bdcf6a157}</UniqueIdentifier>
     </Filter>
@@ -24,6 +21,27 @@
     </Filter>
     <Filter Include="Source Files\Component\Render">
       <UniqueIdentifier>{21203700-855f-43a4-99e5-6872140c63be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component\Physics">
+      <UniqueIdentifier>{00bd5801-a340-4a6c-8f96-ec940350bdab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEntity">
+      <UniqueIdentifier>{9f038cc6-a64f-4994-b222-8aaaa602fb47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEntity\Sprite">
+      <UniqueIdentifier>{4f374307-9b29-4f2f-9e46-325ba268147d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility">
+      <UniqueIdentifier>{a6d23c4d-39ee-4186-be42-46cad31b6f15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Math">
+      <UniqueIdentifier>{750ab6f0-aacd-409c-9926-b9a4b174984d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameScript">
+      <UniqueIdentifier>{cd7688d7-af9d-4a48-b96a-0ce5c5f35133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameScript\Level">
+      <UniqueIdentifier>{f627ee0a-4ff2-4d1d-ab41-38f9fbad7c2b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -39,14 +57,35 @@
     <ClCompile Include="Engine\MainDriver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Sprite\Sprite.cpp">
-      <Filter>Source Files\Sprite</Filter>
-    </ClCompile>
     <ClCompile Include="Engine\GameManager\SDLManager.cpp">
       <Filter>Source Files\GameManager</Filter>
     </ClCompile>
     <ClCompile Include="Engine\GameManager\SubSystemManager.cpp">
       <Filter>Source Files\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Component\Render\CircleRenderer2D.cpp">
+      <Filter>Source Files\Component\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Component\Physics\GameCollider.cpp">
+      <Filter>Source Files\Component\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\GameEntity\Sprite\Sprite.cpp">
+      <Filter>Source Files\GameEntity\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\GameEntity\GameEntity.cpp">
+      <Filter>Source Files\GameEntity</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Component\Physics\RectangleCollider2D.cpp">
+      <Filter>Source Files\Component\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Brick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Utility\Math\GameMathcpp.cpp">
+      <Filter>Source Files\Utility\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Game Assets\Scripts\Level\LevelManager.cpp">
+      <Filter>Source Files\GameScript\Level</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -59,14 +98,35 @@
     <ClInclude Include="Engine\Component\GameComponent.h">
       <Filter>Source Files\Component</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Sprite\Sprite.h">
-      <Filter>Source Files\Sprite</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\GameManager\SDLManager.h">
       <Filter>Source Files\GameManager</Filter>
     </ClInclude>
     <ClInclude Include="Engine\GameManager\SubSystemManager.h">
       <Filter>Source Files\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Component\Render\CircleRenderer2D.h">
+      <Filter>Source Files\Component\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Component\Physics\GameCollider.h">
+      <Filter>Source Files\Component\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameEntity\Sprite\Sprite.h">
+      <Filter>Source Files\GameEntity\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameEntity\GameEntity.h">
+      <Filter>Source Files\GameEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Component\Physics\RectangleCollider2D.h">
+      <Filter>Source Files\Component\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Utility\Math\GameMath.h">
+      <Filter>Source Files\Utility\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Brick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game Assets\Scripts\Level\LevelManager.h">
+      <Filter>Source Files\GameScript\Level</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

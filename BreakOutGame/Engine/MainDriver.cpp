@@ -4,9 +4,10 @@
 #define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>
 #include <crtdbg.h>
-#include <vector>
+#include <unordered_set>
 
 #include "Component/Render/GameRenderer.h"
+#include "Component/Physics/GameCollider.h"
 #include "GameManager/SubSystemManager.h"
 #include "GameManager/SDLManager.h"
 
@@ -16,7 +17,11 @@ int main(int argc, char *argv[])
 {
 	SubSystemManager subSystemManager = SubSystemManager();
 	SDLManager sdlManager = SDLManager();
-	vector<GameRenderer*> RenderQueue;
+	unordered_set<GameRenderer*> RenderQueue;
+	unordered_set<GameCollider*> ColliderQueue;
+
+
+	//To-do: Define Collider Component and add them there
 
 	if (subSystemManager.InitSubSystems()) 
 	{

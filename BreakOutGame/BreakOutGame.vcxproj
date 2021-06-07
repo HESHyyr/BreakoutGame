@@ -19,21 +19,35 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Brick.cpp" />
     <ClCompile Include="Engine\Component\GameComponent.cpp" />
+    <ClCompile Include="Engine\Component\Physics\GameCollider.cpp" />
+    <ClCompile Include="Engine\Component\Physics\RectangleCollider2D.cpp" />
+    <ClCompile Include="Engine\Component\Render\CircleRenderer2D.cpp" />
     <ClCompile Include="Engine\Component\Render\GameRenderer.cpp" />
     <ClCompile Include="Engine\Component\Render\RectangleRenderer2D.cpp" />
+    <ClCompile Include="Engine\GameEntity\GameEntity.cpp" />
+    <ClCompile Include="Engine\GameEntity\Sprite\Sprite.cpp" />
     <ClCompile Include="Engine\GameManager\SDLManager.cpp" />
     <ClCompile Include="Engine\GameManager\SubSystemManager.cpp" />
     <ClCompile Include="Engine\MainDriver.cpp" />
-    <ClCompile Include="Engine\Sprite\Sprite.cpp" />
+    <ClCompile Include="Engine\Utility\Math\GameMathcpp.cpp" />
+    <ClCompile Include="Game Assets\Scripts\Level\LevelManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Brick.h" />
     <ClInclude Include="Engine\Component\GameComponent.h" />
+    <ClInclude Include="Engine\Component\Physics\GameCollider.h" />
+    <ClInclude Include="Engine\Component\Physics\RectangleCollider2D.h" />
+    <ClInclude Include="Engine\Component\Render\CircleRenderer2D.h" />
     <ClInclude Include="Engine\Component\Render\GameRenderer.h" />
     <ClInclude Include="Engine\Component\Render\RectangleRenderer2D.h" />
+    <ClInclude Include="Engine\GameEntity\GameEntity.h" />
+    <ClInclude Include="Engine\GameEntity\Sprite\Sprite.h" />
     <ClInclude Include="Engine\GameManager\SDLManager.h" />
     <ClInclude Include="Engine\GameManager\SubSystemManager.h" />
-    <ClInclude Include="Engine\Sprite\Sprite.h" />
+    <ClInclude Include="Engine\Utility\Math\GameMath.h" />
+    <ClInclude Include="Game Assets\Scripts\Level\LevelManager.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

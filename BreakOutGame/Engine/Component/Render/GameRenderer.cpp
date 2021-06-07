@@ -2,10 +2,10 @@
 
 #include "GameRenderer.h"
 
-GameRenderer::GameRenderer(vector<GameRenderer*> &mainRendererList, SDL_Rect& transformReference)
-	:rendererList(mainRendererList), objectTransform(transformReference)
+GameRenderer::GameRenderer(GameEntity& gameEntity, unordered_set<GameRenderer*> &mainRendererList)
+	:rendererList(mainRendererList), GameComponent::GameComponent(gameEntity)
 {
-	mainRendererList.push_back(this);
+	mainRendererList.insert(this);
 }
 
 void GameRenderer::ChangeColor(Color color)
@@ -20,13 +20,5 @@ void GameRenderer::Render(SDL_Renderer* renderer) const
 
 void GameRenderer::DestroySelf()
 {
-	//Not using Erase–remove idiom, cause all values should be unique
-	//https://en.wikipedia.org/wiki/Erase%E2%80%93remove_idiom
-
-	vector<GameRenderer*>::iterator myIterator;
-	for (myIterator = rendererList.begin(); myIterator < rendererList.end(); myIterator++) {
-		if (*myIterator == this)
-			break;
-	}
-	rendererList.erase(myIterator);
+	rendererList.erase(this);
 }

@@ -1,24 +1,24 @@
 #pragma once
+
+#include <unordered_set>
+
 #include "GameManager/SDLManager.h"
 #include "Component/GameComponent.h"
-#include <vector>
 
-using namespace std;
 
 struct Color
 {
 	Uint8 r, g, b, a;
 };
 
-class GameRenderer: GameComponent
+class GameRenderer: public GameComponent
 {
 
 public:
 
 	Color color;
-	SDL_Rect& objectTransform;
 
-	GameRenderer(vector<GameRenderer*> &mainRendererList , SDL_Rect& transformReference);
+	GameRenderer(GameEntity& gameEntity, unordered_set<GameRenderer*> &mainRendererList);
 
 	void ChangeColor(Color color);
 	virtual void Render(SDL_Renderer* renderer) const;
@@ -26,5 +26,5 @@ public:
 
 private:
 
-	vector<GameRenderer*> &rendererList;
+	unordered_set<GameRenderer*> &rendererList;
 };
