@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Brick.cpp" />
     <ClCompile Include="Engine\Component\GameComponent.cpp" />
     <ClCompile Include="Engine\Component\Physics\GameCollider.cpp" />
     <ClCompile Include="Engine\Component\Physics\RectangleCollider2D.cpp" />
@@ -33,9 +32,9 @@
     <ClCompile Include="Engine\MainDriver.cpp" />
     <ClCompile Include="Engine\Utility\Math\GameMathcpp.cpp" />
     <ClCompile Include="Game Assets\Scripts\Level\LevelManager.cpp" />
+    <ClCompile Include="Game Assets\Scripts\Sprites\Brick.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Brick.h" />
     <ClInclude Include="Engine\Component\GameComponent.h" />
     <ClInclude Include="Engine\Component\Physics\GameCollider.h" />
     <ClInclude Include="Engine\Component\Physics\RectangleCollider2D.h" />
@@ -48,6 +47,7 @@
     <ClInclude Include="Engine\GameManager\SubSystemManager.h" />
     <ClInclude Include="Engine\Utility\Math\GameMath.h" />
     <ClInclude Include="Game Assets\Scripts\Level\LevelManager.h" />
+    <ClInclude Include="Game Assets\Scripts\Sprites\Brick.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -105,7 +105,7 @@
     <IncludePath>D:\GameDev Projects\BreakOut\BreakOutGame\BreakOutGame\Library\SDL2-2.0.12\include;D:\GameDev Projects\BreakOut\BreakOutGame\BreakOutGame\Library\SDL2_image-2.0.5\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)\BreakOutGame\Engine;$(SolutionDir)\BreakOutGame\Library\SDL2_image-2.0.5\include;$(SolutionDir)\BreakOutGame\Library\SDL2_ttf-devel-2.0.15-VC\SDL2_ttf-2.0.15\include;$(SolutionDir)\BreakOutGame\Library\SDL2-2.0.12\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\BreakOutGame\Game Assets\Scripts;$(SolutionDir)\BreakOutGame\Engine;$(SolutionDir)\BreakOutGame\Library\SDL2_image-2.0.5\include;$(SolutionDir)\BreakOutGame\Library\SDL2_ttf-devel-2.0.15-VC\SDL2_ttf-2.0.15\include;$(SolutionDir)\BreakOutGame\Library\SDL2-2.0.12\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)\BreakOutGame\Library\SDL2_image-2.0.5\lib\x64;$(SolutionDir)\BreakOutGame\Library\SDL2_ttf-devel-2.0.15-VC\SDL2_ttf-2.0.15\lib\x64;$(SolutionDir)\BreakOutGame\Library\SDL2-2.0.12\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

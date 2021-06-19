@@ -18,7 +18,8 @@ public:
 	string tag;
 	unordered_set<GameComponent*> myComponents;
 
-	GameEntity* static CreateGameEntity()
+	template<class T>
+	static GameEntity* CreateGameEntity() { return new T(); };
 
 	void ChangePosition(int x, int y);
 

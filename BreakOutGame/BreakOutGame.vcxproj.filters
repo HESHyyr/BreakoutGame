@@ -43,6 +43,9 @@
     <Filter Include="Source Files\GameScript\Level">
       <UniqueIdentifier>{f627ee0a-4ff2-4d1d-ab41-38f9fbad7c2b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GameScript\Sprites">
+      <UniqueIdentifier>{2d81692b-85a6-4176-9dfc-920103905999}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\Component\Render\GameRenderer.cpp">
@@ -78,14 +81,14 @@
     <ClCompile Include="Engine\Component\Physics\RectangleCollider2D.cpp">
       <Filter>Source Files\Component\Physics</Filter>
     </ClCompile>
-    <ClCompile Include="Brick.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Engine\Utility\Math\GameMathcpp.cpp">
       <Filter>Source Files\Utility\Math</Filter>
     </ClCompile>
     <ClCompile Include="Game Assets\Scripts\Level\LevelManager.cpp">
       <Filter>Source Files\GameScript\Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Game Assets\Scripts\Sprites\Brick.cpp">
+      <Filter>Source Files\GameScript\Sprites</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -122,11 +125,11 @@
     <ClInclude Include="Engine\Utility\Math\GameMath.h">
       <Filter>Source Files\Utility\Math</Filter>
     </ClInclude>
-    <ClInclude Include="Brick.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Game Assets\Scripts\Level\LevelManager.h">
       <Filter>Source Files\GameScript\Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Game Assets\Scripts\Sprites\Brick.h">
+      <Filter>Source Files\GameScript\Sprites</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
