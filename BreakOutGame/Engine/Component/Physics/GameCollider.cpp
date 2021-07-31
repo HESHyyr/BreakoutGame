@@ -1,6 +1,6 @@
 #include "GameCollider.h"
 
-GameCollider::GameCollider(GameEntity& gameEntity, unordered_set<GameCollider*> &mainColliderList, ColliderType type, bool isStatic, bool isPhysical)
+GameCollider::GameCollider(GameComponent& gameEntity, unordered_set<GameCollider*> &mainColliderList, ColliderType type, bool isStatic, bool isPhysical)
 	:GameComponent::GameComponent(gameEntity), colliderList(mainColliderList), myType(type), isStatic(isStatic), isPhysical(isPhysical)
 {
 	colliderList.insert(this);

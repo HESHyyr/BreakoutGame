@@ -3,12 +3,6 @@
 #include "GameCollider.h"
 #include "Utility/Math/GameMath.h"
 
-struct BoundingBox
-{
-	Vector2 min;
-	Vector2 max;
-};
-
 class RectangleCollider2D :public GameCollider
 {
 

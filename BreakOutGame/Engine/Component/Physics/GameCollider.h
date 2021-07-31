@@ -2,8 +2,14 @@
 
 #include <unordered_set>
 
-#include "Component/GameComponent.h"
-#include "Utility/Math/GameMath.h"
+#include <Core/CoreClass.h>
+#include <Utility/Math/GameMath.h>
+
+struct BoundingBox
+{
+	Vector2 min;
+	Vector2 max;
+};
 
 class GameCollider :public GameComponent
 {
@@ -19,7 +25,7 @@ public:
 	bool isPhysical = true;
 
 
-	GameCollider(GameEntity& gameEntity, unordered_set<GameCollider*> &mainColliderList, ColliderType type, bool isStatic = true, bool isPhysical = true);
+	GameCollider(GameComponent& gameEntity, unordered_set<GameCollider*> &mainColliderList, ColliderType type, bool isStatic = true, bool isPhysical = true);
 	virtual void DestroySelf() override;
 
 protected:
@@ -32,6 +38,8 @@ protected:
 	ColliderType myType;
 
 private:
+
+	BoundingBox myBoundingBox;
 
 	unordered_set<GameCollider*> &colliderList;
 

@@ -2,8 +2,8 @@
 
 #include <unordered_set>
 
-#include "GameManager/SDLManager.h"
-#include "Component/GameComponent.h"
+#include <GameManager/SDLManager.h>
+#include <Core/CoreClass.h>
 
 
 struct Color

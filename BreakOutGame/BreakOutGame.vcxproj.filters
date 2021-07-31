@@ -25,12 +25,6 @@
     <Filter Include="Source Files\Component\Physics">
       <UniqueIdentifier>{00bd5801-a340-4a6c-8f96-ec940350bdab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\GameEntity">
-      <UniqueIdentifier>{9f038cc6-a64f-4994-b222-8aaaa602fb47}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\GameEntity\Sprite">
-      <UniqueIdentifier>{4f374307-9b29-4f2f-9e46-325ba268147d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Utility">
       <UniqueIdentifier>{a6d23c4d-39ee-4186-be42-46cad31b6f15}</UniqueIdentifier>
     </Filter>
@@ -46,6 +40,12 @@
     <Filter Include="Source Files\GameScript\Sprites">
       <UniqueIdentifier>{2d81692b-85a6-4176-9dfc-920103905999}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Utility\DataStructures">
+      <UniqueIdentifier>{a61950a7-edd7-4c75-982e-c035292780f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{0b807cb8-5dd2-4cdb-a3fc-2cf581d2d1f3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\Component\Render\GameRenderer.cpp">
@@ -53,9 +53,6 @@
     </ClCompile>
     <ClCompile Include="Engine\Component\Render\RectangleRenderer2D.cpp">
       <Filter>Source Files\Component\Render</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Component\GameComponent.cpp">
-      <Filter>Source Files\Component</Filter>
     </ClCompile>
     <ClCompile Include="Engine\MainDriver.cpp">
       <Filter>Source Files</Filter>
@@ -72,23 +69,26 @@
     <ClCompile Include="Engine\Component\Physics\GameCollider.cpp">
       <Filter>Source Files\Component\Physics</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\GameEntity\Sprite\Sprite.cpp">
-      <Filter>Source Files\GameEntity\Sprite</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\GameEntity\GameEntity.cpp">
-      <Filter>Source Files\GameEntity</Filter>
-    </ClCompile>
     <ClCompile Include="Engine\Component\Physics\RectangleCollider2D.cpp">
       <Filter>Source Files\Component\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Utility\Math\GameMathcpp.cpp">
-      <Filter>Source Files\Utility\Math</Filter>
     </ClCompile>
     <ClCompile Include="Game Assets\Scripts\Level\LevelManager.cpp">
       <Filter>Source Files\GameScript\Level</Filter>
     </ClCompile>
     <ClCompile Include="Game Assets\Scripts\Sprites\Brick.cpp">
       <Filter>Source Files\GameScript\Sprites</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Utility\Math\GameMath.cpp">
+      <Filter>Source Files\Utility\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\GameManager\PhysicsManager.cpp">
+      <Filter>Source Files\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\GameManager\GameComponentManager.cpp">
+      <Filter>Source Files\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Core\CoreClass.cpp">
+      <Filter>Source Files\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -97,9 +97,6 @@
     </ClInclude>
     <ClInclude Include="Engine\Component\Render\RectangleRenderer2D.h">
       <Filter>Source Files\Component\Render</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Component\GameComponent.h">
-      <Filter>Source Files\Component</Filter>
     </ClInclude>
     <ClInclude Include="Engine\GameManager\SDLManager.h">
       <Filter>Source Files\GameManager</Filter>
@@ -113,12 +110,6 @@
     <ClInclude Include="Engine\Component\Physics\GameCollider.h">
       <Filter>Source Files\Component\Physics</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\GameEntity\Sprite\Sprite.h">
-      <Filter>Source Files\GameEntity\Sprite</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\GameEntity\GameEntity.h">
-      <Filter>Source Files\GameEntity</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\Component\Physics\RectangleCollider2D.h">
       <Filter>Source Files\Component\Physics</Filter>
     </ClInclude>
@@ -130,6 +121,21 @@
     </ClInclude>
     <ClInclude Include="Game Assets\Scripts\Sprites\Brick.h">
       <Filter>Source Files\GameScript\Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameManager\GameSingleton.h">
+      <Filter>Source Files\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures.h">
+      <Filter>Source Files\Utility\DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameManager\PhysicsManager.h">
+      <Filter>Source Files\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameManager\GameComponentManager.h">
+      <Filter>Source Files\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Core\CoreClass.h">
+      <Filter>Source Files\Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
