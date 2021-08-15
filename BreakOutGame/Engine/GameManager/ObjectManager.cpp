@@ -3,6 +3,10 @@
 ObjectManager::ObjectManager()
 {
 	currentSize = 0;
+	for(int i = 0; i < 1024; i++)
+	{
+		objects[i] = nullptr;
+	}
 }
 
 Object* ObjectManager::GetObject(uint32_t id) const

@@ -6,6 +6,8 @@
 #include <GameManager/GameSingleton.h>
 #include <Core/CoreClass.h>
 
+using namespace std;
+
 class ObjectManager : public GameSingleton<ObjectManager>
 {
 
@@ -18,7 +20,7 @@ public:
 	{
 		if(currentSize >= 1024)
 		{
-			cout << "Reach Maximum Object Number." << endl;
+			cout << "[ObjectManager] : Reach Maximum Object Number." << endl;
 			return nullptr;
 		}
 
