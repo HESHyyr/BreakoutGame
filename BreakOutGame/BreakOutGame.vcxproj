@@ -27,15 +27,16 @@
     <ClCompile Include="Engine\Core\CoreClass.cpp" />
     <ClCompile Include="Engine\GameManager\ObjectManager.cpp" />
     <ClCompile Include="Engine\GameManager\PhysicsManager.cpp" />
+    <ClCompile Include="Engine\GameManager\RenderManager.cpp" />
     <ClCompile Include="Engine\GameManager\SDLManager.cpp" />
     <ClCompile Include="Engine\GameManager\SubSystemManager.cpp" />
     <ClCompile Include="Engine\MainDriver.cpp" />
+    <ClCompile Include="Engine\Utility\DataStructures\Color.cpp" />
     <ClCompile Include="Engine\Utility\Math\GameMath.cpp" />
     <ClCompile Include="Game Assets\Scripts\Level\LevelManager.cpp" />
     <ClCompile Include="Game Assets\Scripts\Sprites\Brick.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DataStructures.h" />
     <ClInclude Include="Engine\Component\Physics\GameCollider.h" />
     <ClInclude Include="Engine\Component\Physics\RectangleCollider2D.h" />
     <ClInclude Include="Engine\Component\Render\CircleRenderer2D.h" />
@@ -45,8 +46,10 @@
     <ClInclude Include="Engine\GameManager\ObjectManager.h" />
     <ClInclude Include="Engine\GameManager\GameSingleton.h" />
     <ClInclude Include="Engine\GameManager\PhysicsManager.h" />
+    <ClInclude Include="Engine\GameManager\RenderManager.h" />
     <ClInclude Include="Engine\GameManager\SDLManager.h" />
     <ClInclude Include="Engine\GameManager\SubSystemManager.h" />
+    <ClInclude Include="Engine\Utility\DataStructures\Color.h" />
     <ClInclude Include="Engine\Utility\Math\GameMath.h" />
     <ClInclude Include="Game Assets\Scripts\Level\LevelManager.h" />
     <ClInclude Include="Game Assets\Scripts\Sprites\Brick.h" />

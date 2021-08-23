@@ -84,11 +84,17 @@
     <ClCompile Include="Engine\GameManager\PhysicsManager.cpp">
       <Filter>Source Files\GameManager</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\GameManager\GameComponentManager.cpp">
-      <Filter>Source Files\GameManager</Filter>
-    </ClCompile>
     <ClCompile Include="Engine\Core\CoreClass.cpp">
       <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\GameManager\ObjectManager.cpp">
+      <Filter>Source Files\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\GameManager\RenderManager.cpp">
+      <Filter>Source Files\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Utility\DataStructures\Color.cpp">
+      <Filter>Source Files\Utility\DataStructures</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -125,17 +131,20 @@
     <ClInclude Include="Engine\GameManager\GameSingleton.h">
       <Filter>Source Files\GameManager</Filter>
     </ClInclude>
-    <ClInclude Include="DataStructures.h">
-      <Filter>Source Files\Utility\DataStructures</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\GameManager\PhysicsManager.h">
-      <Filter>Source Files\GameManager</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\GameManager\GameComponentManager.h">
       <Filter>Source Files\GameManager</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Core\CoreClass.h">
       <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameManager\ObjectManager.h">
+      <Filter>Source Files\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameManager\RenderManager.h">
+      <Filter>Source Files\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Utility\DataStructures\Color.h">
+      <Filter>Source Files\Utility\DataStructures</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,14 +1,13 @@
-#include <algorithm>
-
 #include "GameRenderer.h"
 
-GameRenderer::GameRenderer(GameEntity& gameEntity, unordered_set<GameRenderer*> &mainRendererList)
-	:rendererList(mainRendererList), GameComponent::GameComponent(gameEntity)
+#include <GameManager/RenderManager.h>
+
+GameRenderer::GameRenderer()
 {
-	mainRendererList.insert(this);
+	RenderManager::GetInstance().RenderQueue.insert(this);
 }
 
-void GameRenderer::ChangeColor(Color color)
+void GameRenderer::ChangeColor(const Color& color)
 {
 	this->color = color;
 }
@@ -20,5 +19,5 @@ void GameRenderer::Render(SDL_Renderer* renderer) const
 
 void GameRenderer::DestroySelf()
 {
-	rendererList.erase(this);
+	RenderManager::GetInstance().RenderQueue.erase(this);
 }

@@ -2,29 +2,22 @@
 
 #include <unordered_set>
 
-#include <GameManager/SDLManager.h>
 #include <Core/CoreClass.h>
+#include <GameManager/SDLManager.h>
+#include <Utility/DataStructures/Color.h>
 
-
-struct Color
-{
-	Uint8 r, g, b, a;
-};
 
 class GameRenderer: public GameComponent
 {
 
 public:
 
-	Color color;
+	GameRenderer();
 
-	GameRenderer(GameEntity& gameEntity, unordered_set<GameRenderer*> &mainRendererList);
-
-	void ChangeColor(Color color);
+	void ChangeColor(const Color& color);
 	virtual void Render(SDL_Renderer* renderer) const;
 	virtual void DestroySelf() override;
 
-private:
 
-	unordered_set<GameRenderer*> &rendererList;
+	Color color;
 };

@@ -12,11 +12,11 @@ void GameCollider::CheckCollision(GameCollider* otherCollider)
 	if(myType == ColliderType::Rectangle && otherCollider->myType == ColliderType::Rectangle)
 	{
 		//Collision between Rectangles
-		if(CheckRectangleCollision(Vector2(myGameEntity.transform.x, myGameEntity.transform.y), 
-			Vector2(myGameEntity.transform.x + myGameEntity.transform.h, myGameEntity.transform.y + myGameEntity.transform.w),
-			Vector2(otherCollider->myGameEntity.transform.x, otherCollider->myGameEntity.transform.y),
-			Vector2(otherCollider->myGameEntity.transform.x + otherCollider->myGameEntity.transform.h, 
-				otherCollider->myGameEntity.transform.y + otherCollider->myGameEntity.transform.w)))
+		if(CheckRectangleCollision(Vector2(myGameEntity->transform.x, myGameEntity->transform.y), 
+			Vector2(myGameEntity->transform.x + myGameEntity->transform.h, myGameEntity->transform.y + myGameEntity->transform.w),
+			Vector2(otherCollider->myGameEntity->transform.x, otherCollider->myGameEntity->transform.y),
+			Vector2(otherCollider->myGameEntity->transform.x + otherCollider->myGameEntity->transform.h,
+				otherCollider->myGameEntity->transform.y + otherCollider->myGameEntity->transform.w)))
 		{
 			OnCollisionEnter(otherCollider);
 		}
@@ -24,9 +24,9 @@ void GameCollider::CheckCollision(GameCollider* otherCollider)
 	else if(myType == ColliderType::Circle && otherCollider->myType == ColliderType::Circle)
 	{
 		//Collision between Circles
-		if(CheckCircleCollision(Vector2(myGameEntity.transform.x, myGameEntity.transform.y), myGameEntity.transform.h,
-			Vector2(otherCollider->myGameEntity.transform.x, otherCollider->myGameEntity.transform.y), 
-			otherCollider->myGameEntity.transform.h))
+		if(CheckCircleCollision(Vector2(myGameEntity->transform.x, myGameEntity->transform.y), myGameEntity->transform.h,
+			Vector2(otherCollider->myGameEntity->transform.x, otherCollider->myGameEntity->transform.y),
+			otherCollider->myGameEntity->transform.h))
 		{
 			OnCollisionEnter(otherCollider);
 		}
@@ -36,20 +36,20 @@ void GameCollider::CheckCollision(GameCollider* otherCollider)
 		//Collision between Rectangles and Circles
 		if(myType == ColliderType::Circle)
 		{
-			if(CheckRectCircleCollision(Vector2(otherCollider->myGameEntity.transform.x, otherCollider->myGameEntity.transform.y),
-				Vector2(otherCollider->myGameEntity.transform.w, otherCollider->myGameEntity.transform.h),
-				Vector2(myGameEntity.transform.x, myGameEntity.transform.y),
-				myGameEntity.transform.w))
+			if(CheckRectCircleCollision(Vector2(otherCollider->myGameEntity->transform.x, otherCollider->myGameEntity->transform.y),
+				Vector2(otherCollider->myGameEntity->transform.w, otherCollider->myGameEntity->transform.h),
+				Vector2(myGameEntity->transform.x, myGameEntity->transform.y),
+				myGameEntity->transform.w))
 			{
 				OnCollisionEnter(otherCollider);
 			}
 		}
 		else
 		{
-			if (CheckRectCircleCollision(Vector2(myGameEntity.transform.x, myGameEntity.transform.y),
-				Vector2(myGameEntity.transform.w, myGameEntity.transform.h),
-				Vector2(otherCollider->myGameEntity.transform.x, otherCollider->myGameEntity.transform.y),
-				otherCollider->myGameEntity.transform.w))
+			if (CheckRectCircleCollision(Vector2(myGameEntity->transform.x, myGameEntity->transform.y),
+				Vector2(myGameEntity->transform.w, myGameEntity->transform.h),
+				Vector2(otherCollider->myGameEntity->transform.x, otherCollider->myGameEntity->transform.y),
+				otherCollider->myGameEntity->transform.w))
 			{
 				OnCollisionEnter(otherCollider);
 			}

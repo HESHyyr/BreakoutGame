@@ -11,16 +11,16 @@ class Object
 
 public:
 
-	uint32_t GetId();
+	uint32_t GetId() const;
 
 	virtual void SetId(uint32_t id);
 
 	//Game Logic
-	virtual void Update(float timePerFrame) const = 0;
+	virtual void Update(float timePerFrame) = 0;
+	virtual void DestroySelf() = 0;
 
 protected:
 
-	//Only some Components will use ID for tracking
 	uint32_t objectID;
 
 };
@@ -30,21 +30,17 @@ class GameComponent : public Object
 
 public:
 
-	GameEntity& myGameEntity;
-	bool isActive;
-
-	GameComponent(GameEntity& gameEntity)
-		: myGameEntity(gameEntity)
-	{}
-
 	//Virtual destructor for polymorphism
 	virtual ~GameComponent() {};
 
-	void SetMyEntity(GameEntity& gameEntity);
-
+	void SetMyEntity(GameEntity* gameEntity);
 	void SetActive(bool active) { isActive = active; }
-	virtual void DestroySelf() = 0;
 
+	virtual void Update(float timePerFrame) override {};
+	virtual void DestroySelf() override;
+
+	GameEntity* myGameEntity;
+	bool isActive;
 
 };
 
@@ -52,15 +48,19 @@ class GameEntity : public Object
 {
 public:
 
-	SDL_Rect transform;
-	char* tag;
-	vector<GameComponent*> myComponents;
+	//Virtual destructor for polymorphism
+	virtual ~GameEntity() {};
 
 	void ChangePosition(int x, int y);
 
-	virtual void OnCollisionEnter(GameComponent* otherCollider);
-	virtual void OnTriggerEnter(GameComponent* otherCollider);
+	virtual void OnCollisionEnter(GameComponent* otherCollider) {};
+	virtual void OnTriggerEnter(GameComponent* otherCollider) {};
 
-	void DestroySelf();
+	virtual void Update(float timePerFrame) override {};
+	virtual void DestroySelf() override;
 
+
+	SDL_Rect transform;
+	char* tag;
+	vector<GameComponent*> myComponents;
 };

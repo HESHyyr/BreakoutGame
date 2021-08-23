@@ -1,5 +1,7 @@
 #pragma once
 
+//Object Manager is mainly used for resource/memory management on objects
+
 #include <memory>
 #include <iostream>
 
@@ -24,10 +26,10 @@ public:
 			return nullptr;
 		}
 
-		objects[currentSize] = new ObjectType();
-		objects[currentSize]->GetId(currentSize);
+		objects[currentSize] = unique_ptr<Object>(new ObjectType()); //make_unique does not work with abstract class(Object)
+		objects[currentSize].get()->SetId(currentSize);
 		currentSize++;
-		return objects[currentSize - 1];
+		return objects[currentSize - 1].get();
 	}
 
 	Object* GetObject(uint32_t id) const;
@@ -37,6 +39,6 @@ public:
 private:
 
 	uint32_t currentSize;
-	Object* objects[1024];
+	unique_ptr<Object> objects[1024];
 };
 

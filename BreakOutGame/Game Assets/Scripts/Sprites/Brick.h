@@ -3,6 +3,10 @@
 
 class Brick : public GameEntity
 {
+
+public:
+
+
 	Brick();
 };
 

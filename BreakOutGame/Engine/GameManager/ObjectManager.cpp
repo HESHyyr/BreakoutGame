@@ -3,38 +3,34 @@
 ObjectManager::ObjectManager()
 {
 	currentSize = 0;
-	for(int i = 0; i < 1024; i++)
-	{
-		objects[i] = nullptr;
-	}
 }
 
 Object* ObjectManager::GetObject(uint32_t id) const
 {
 	if (id >= currentSize || id < 0)
 	{
-		cout << "[ObjectManager] : ID is invalid for accessing!" << endl;
+		cout << "[ObjectManager] : ID " << id << " is invalid for accessing!" << endl;
 		return nullptr;
 	}
 
-	return objects[id];
+	return objects[id].get();
 }
 
 void ObjectManager::DeleteObject(uint32_t id)
 {
 	if(id >= currentSize || id < 0)
 	{
-		cout << "[ObjectManager] : ID is invalid for deleting!" << endl;
+		cout << "[ObjectManager] : ID " << id << " is invalid for deleting!" << endl;
 		return;
 	}
 
 	//Deallocate the corresponding object
-	delete objects[id];
+	objects[id].reset();
 
 	if(currentSize != 0)
 	{
-		objects[id] = objects[currentSize - 1];
-		objects[id]->SetId(id);
+		objects[id].swap(objects[currentSize - 1]);
+		objects[id].get()->SetId(id);
 		currentSize--;
 	}
 	

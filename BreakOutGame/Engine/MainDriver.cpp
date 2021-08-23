@@ -3,11 +3,11 @@
 
 #define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>
+#include <time.h>
 #include <crtdbg.h>
-#include <unordered_set>
 
-#include "Component/Render/GameRenderer.h"
-#include "Component/Physics/GameCollider.h"
+#include <GameManager/RenderManager.h>
+#include <GameManager/PhysicsManager.h>
 #include "GameManager/SubSystemManager.h"
 #include "GameManager/SDLManager.h"
 
@@ -15,10 +15,11 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+	//Init RNG
+	srand(time(NULL));
+
 	SubSystemManager subSystemManager = SubSystemManager();
 	SDLManager sdlManager = SDLManager();
-	unordered_set<GameRenderer*> RenderQueue;
-	unordered_set<GameCollider*> ColliderQueue;
 
 
 	//To-do: Define Collider Component and add them there
@@ -57,7 +58,7 @@ int main(int argc, char *argv[])
 				//Update Draw Calls
 				SDL_RenderClear(sdlManager.myRenderer.get());
 
-				for(GameRenderer* r: RenderQueue)
+				for(GameRenderer* r: RenderManager::GetInstance().RenderQueue)
 					r->Render(sdlManager.myRenderer.get());
 
 
