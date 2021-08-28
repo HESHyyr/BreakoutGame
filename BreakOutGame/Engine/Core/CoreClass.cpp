@@ -15,6 +15,7 @@ void Object::SetId(uint32_t id)
 void GameComponent::SetMyEntity(GameEntity* gameEntity)
 {
 	myGameEntity = gameEntity;
+	myGameEntity->myComponents.push_back(this);
 }
 
 void GameComponent::DestroySelf()

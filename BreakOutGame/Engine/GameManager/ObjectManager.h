@@ -26,10 +26,13 @@ public:
 			return nullptr;
 		}
 
-		objects[currentSize] = unique_ptr<Object>(new ObjectType()); //make_unique does not work with abstract class(Object)
-		objects[currentSize].get()->SetId(currentSize);
-		currentSize++;
-		return objects[currentSize - 1].get();
+		int currentID = currentSize;
+		objects[currentSize++] = unique_ptr<Object>(new ObjectType()); //make_unique does not work with abstract class(Object)
+		Object* currentObject = objects[currentID].get();
+		currentObject->SetId(currentID);
+		currentObject->Init();
+		
+		return objects[currentID].get();
 	}
 
 	Object* GetObject(uint32_t id) const;

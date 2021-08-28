@@ -1,10 +1,23 @@
 #include "Brick.h"
+
+#include <GameManager/ObjectManager.h>
 #include <Component/Render/RectangleRenderer2D.h>
 #include <Component/Physics/GameCollider.h>
 
 
 Brick::Brick()
 {
-	//myComponents.insert(new RectangleCollider2D(*this));
+	//Init size
+	transform.w = 20;
+	transform.h = 10;
+
 	//To-do: Fix collider constructor and architecture
+}
+
+void Brick::Init()
+{
+
+	//Init components
+	GameComponent* myRenderer = static_cast<GameComponent*> (ObjectManager::GetInstance().CreateObject<RectangleRenderer2D>());
+	myRenderer->SetMyEntity(this);
 }
