@@ -35,6 +35,7 @@
     <ClCompile Include="Engine\Utility\Math\GameMath.cpp" />
     <ClCompile Include="Game Assets\Scripts\Level\LevelManager.cpp" />
     <ClCompile Include="Game Assets\Scripts\Sprites\Brick.cpp" />
+    <ClCompile Include="Game Assets\Scripts\Sprites\PlayerPaddle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Component\Physics\GameCollider.h" />
@@ -53,6 +54,7 @@
     <ClInclude Include="Engine\Utility\Math\GameMath.h" />
     <ClInclude Include="Game Assets\Scripts\Level\LevelManager.h" />
     <ClInclude Include="Game Assets\Scripts\Sprites\Brick.h" />
+    <ClInclude Include="Game Assets\Scripts\Sprites\PlayerPaddle.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

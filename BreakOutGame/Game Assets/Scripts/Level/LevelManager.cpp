@@ -1,10 +1,13 @@
 #include "LevelManager.h"
 #include <stdlib.h>
 
+//Engine Stuff
 #include <GameManager/ObjectManager.h>
 #include <Component/Render/RectangleRenderer2D.h>
 
+//Game Stuff
 #include <Sprites/Brick.h>
+#include <Sprites/PlayerPaddle.h>
 
 LevelManager::LevelManager()
 	:startPosition{100,100}, brickDistanceSetting{50,50}
@@ -13,6 +16,7 @@ LevelManager::LevelManager()
 void LevelManager::Init()
 {
 	InitializeLevel(3, 10);
+	InitializePlayer();
 }
 
 void LevelManager::InitializeLevel(int rows, int columns)
@@ -29,4 +33,11 @@ void LevelManager::InitializeLevel(int rows, int columns)
 			brick->GetComponent<RectangleRenderer2D>()->ChangeColor(brickColor);
 		}
 	}
+}
+
+void LevelManager::InitializePlayer()
+{
+	GameEntity* Player = static_cast<GameEntity*>(ObjectManager::GetInstance().CreateObject<PlayerPaddle>());
+	Player->ChangePosition(400, 500);
+	Player->GetComponent<RectangleRenderer2D>()->ChangeColor(Color::commonColors[CommonColors::white]);
 }

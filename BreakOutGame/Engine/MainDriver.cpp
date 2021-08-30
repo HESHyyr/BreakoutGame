@@ -64,8 +64,8 @@ int main(int argc, char *argv[])
 
 				//Update Draw Calls
 
-				//Reset screen with white background
-				SDL_SetRenderDrawColor(sdlManager.myRenderer.get(), 0xFF, 0xFF, 0xFF, 0xFF);
+				//Reset screen with black background
+				SDL_SetRenderDrawColor(sdlManager.myRenderer.get(), 0x00, 0x00, 0x00, 0xFF);
 				SDL_RenderClear(sdlManager.myRenderer.get());
 
 				for(GameRenderer* r: RenderManager::GetInstance().RenderQueue)

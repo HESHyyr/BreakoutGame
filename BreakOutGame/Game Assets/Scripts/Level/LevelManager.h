@@ -11,6 +11,7 @@ public:
 
 	void Init() override;
 	void InitializeLevel(int rows, int columns);
+	void InitializePlayer();
 
 private:
 

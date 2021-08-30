@@ -96,6 +96,9 @@
     <ClCompile Include="Engine\Utility\DataStructures\Color.cpp">
       <Filter>Source Files\Utility\DataStructures</Filter>
     </ClCompile>
+    <ClCompile Include="Game Assets\Scripts\Sprites\PlayerPaddle.cpp">
+      <Filter>Source Files\GameScript\Sprites</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Component\Render\GameRenderer.h">
@@ -145,6 +148,9 @@
     </ClInclude>
     <ClInclude Include="Engine\Utility\DataStructures\Color.h">
       <Filter>Source Files\Utility\DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="Game Assets\Scripts\Sprites\PlayerPaddle.h">
+      <Filter>Source Files\GameScript\Sprites</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
