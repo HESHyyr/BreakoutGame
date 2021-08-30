@@ -35,3 +35,12 @@ void ObjectManager::DeleteObject(uint32_t id)
 	}
 	
 }
+
+void ObjectManager::ManualResetResourceQueue()
+{
+	for(int i = 0; i < currentSize; i++)
+	{
+		objects[i].reset();
+	}
+	currentSize = 0;
+}

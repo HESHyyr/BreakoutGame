@@ -8,7 +8,5 @@ public:
 
 
 	Brick();
-
-	virtual void Init() override;
 };
 

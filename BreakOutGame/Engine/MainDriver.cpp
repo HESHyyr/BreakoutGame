@@ -84,7 +84,8 @@ int main(int argc, char *argv[])
 	To-do: Choose between RAII or use CRT for memory leak?
 		   Or find another way to check memory leak
 	*/
-	_CrtDumpMemoryLeaks();
+
+	//_CrtDumpMemoryLeaks();
 
 	return 0;
 }

@@ -11,13 +11,9 @@ Brick::Brick()
 	transform.w = 20;
 	transform.h = 10;
 
-	//To-do: Fix collider constructor and architecture
-}
-
-void Brick::Init()
-{
-
 	//Init components
 	GameComponent* myRenderer = static_cast<GameComponent*> (ObjectManager::GetInstance().CreateObject<RectangleRenderer2D>());
 	myRenderer->SetMyEntity(this);
+
+	//To-do: Fix collider constructor and architecture
 }

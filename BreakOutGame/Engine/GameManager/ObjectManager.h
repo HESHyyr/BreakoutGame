@@ -26,8 +26,9 @@ public:
 			return nullptr;
 		}
 
-		int currentID = currentSize;
 		objects[currentSize++] = unique_ptr<Object>(new ObjectType()); //make_unique does not work with abstract class(Object)
+		int currentID = currentSize - 1;	//Get current object ID after Initialization, in case there are nested initialization
+
 		Object* currentObject = objects[currentID].get();
 		currentObject->SetId(currentID);
 		currentObject->Init();
@@ -38,6 +39,8 @@ public:
 	Object* GetObject(uint32_t id) const;
 
 	void DeleteObject(uint32_t id);
+
+	void ManualResetResourceQueue();
 
 private:
 
